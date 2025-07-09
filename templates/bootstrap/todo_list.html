@@ -1,0 +1,29 @@
+{% extends "bootstrap/base.html" %}
+{% block content %}
+<div class="row">
+        <div class="row row-cols-1 row-cols-md-3 g-4">
+    {% for todo in todos %}
+    <div class="col">
+    <div class="card h-100">
+
+      <div class="card-body">
+        <h5 class="card-title">{{ todo.title}}</h5>
+        <a href="update/{{todo.id}}/" class="btn btn-primary">Update</a>
+        <a href="delete/{{todo.id}}/" class="btn btn-danger">Delete</a>
+      </div>
+    </div>
+    </div>
+    {% endfor %}
+     <div class="col">
+    <div class="card h-100">
+
+      <div class="card-body">
+
+        <a href="create/" class="btn btn-success">Add</a>
+      </div>
+    </div>
+    </div>
+    </div>
+
+
+    {% endblock content %}
