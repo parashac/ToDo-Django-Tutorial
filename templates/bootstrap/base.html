@@ -1,10 +1,12 @@
-<!doctype html>
+{ % load static % }
+
+<!DOCTYPE html>
 <html lang="en">
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Bootstrap demo</title>
-    <link href="{% static 'css/bootstrap.min.css' %}" rel="stylesheet" integrity="sha384-LN+7fdVzj6u52u30Kp6M/trliBMCMKTyK833zpbD+pXdCLuTusPj697FH4R/5mcr" crossorigin="anonymous">
+    <link href="{ % static 'css/bootstrap.min.css' %}" rel="stylesheet">
   </head>
   <body>
 <div class="container">
@@ -20,6 +22,6 @@
 
     {% endblock content %}
 </div>
-    <script src="{% static 'js/bootstrap.bundle.min.css' %}" integrity="sha384-ndDqU0Gzau9qJ1lfW4pNLlhNTkCfHzAVBReH9diLvGRem5+R9g2FzA8ZGN954O5Q" crossorigin="anonymous"></script>
+    <script src="{ % static 'js/bootstrap.bundle.min.css' % }"></script>
   </body>
 </html>

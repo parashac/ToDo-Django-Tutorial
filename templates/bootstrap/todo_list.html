@@ -8,8 +8,8 @@
 
       <div class="card-body">
         <h5 class="card-title">{{ todo.title}}</h5>
-        <a href="update/{{todo.id}}/" class="btn btn-primary">Update</a>
-        <a href="delete/{{todo.id}}/" class="btn btn-danger">Delete</a>
+        <a href="{ % url 'todo-update' todo.id %}" class="btn btn-primary">Update</a>
+        <a href="{ % url 'todo-delete' todo.id %}" class="btn btn-danger">Delete</a>
       </div>
     </div>
     </div>
@@ -19,7 +19,7 @@
 
       <div class="card-body">
 
-        <a href="create/" class="btn btn-success">Add</a>
+        <a href="{ % url 'todo-create' %}" class="btn btn-success">Add</a>
       </div>
     </div>
     </div>
